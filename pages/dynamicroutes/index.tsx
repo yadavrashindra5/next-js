@@ -1,5 +1,3 @@
-import Card from "@/components/Card";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const DynamicRoute = () => {
@@ -24,20 +22,6 @@ const DynamicRoute = () => {
       {/* <Link href={{ pathname: "dynamicroutes/about", query: { id: "123" } }}>
         about page
       </Link> */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: "row",
-          justifyContent: "center",
-          rowGap: "10px",
-          columnGap: "10px",
-        }}
-      >
-        {data.map((values, index, array) => {
-          return <Card key={index} user={values} />;
-        })}
-      </div>
     </>
   );
 };
